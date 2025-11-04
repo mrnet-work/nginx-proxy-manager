@@ -1,0 +1,34 @@
+name: 'Upstream Sync'
+
+on:
+  schedule:
+    # Run daily at 2:00 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream \
+            https://github.com/NginxProxyManager/nginx-proxy-manager.git || true
+          git fetch upstream
+
+      - name: Merge upstream develop
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git merge upstream/develop --no-edit
+
+      - name: Push changes
+        run: |
+          git push origin develop

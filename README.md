@@ -8,6 +8,9 @@
 	<a href="https://hub.docker.com/repository/docker/jc21/nginx-proxy-manager">
 		<img src="https://img.shields.io/docker/pulls/jc21/nginx-proxy-manager.svg?style=for-the-badge">
 	</a>
+	<br>
+	<a href="https://github.com/mrnet-work/nginx-proxy-manager/actions/workflows/upstream-sync.yml"><img src="https://github.com/mrnet-work/nginx-proxy-manager/actions/workflows/upstream-sync.yml/badge.svg"></a>
+	<a href="https://github.com/mrnet-work/nginx-proxy-manager/actions/workflows/build-publish-ghcr.yml"><img src="https://github.com/mrnet-work/nginx-proxy-manager/actions/workflows/build-publish-ghcr.yml/badge.svg"></a>
 </p>
 
 This project comes as a pre-built docker image that enables you to easily forward to your websites
@@ -35,6 +38,14 @@ so that the barrier for entry here is low.
 - Access Lists and basic HTTP Authentication for your hosts
 - Advanced Nginx configuration available for super users
 - User management, permissions and audit log
+
+
+## Automation
+
+This fork includes automated workflows for:
+
+- **Upstream Sync**: Automatically syncs the `develop` branch with the upstream repository daily and can be triggered manually. This keeps the fork up-to-date with the latest changes from the original Nginx Proxy Manager project.
+- **Docker Image Publishing**: Automatically builds and publishes Docker images to GitHub Container Registry (ghcr.io/mrnet-work/nginx-proxy-manager) on every new release and tag push. The images are built for multiple architectures (amd64, arm64, arm/v7).
 
 
 ## Hosting your home network
