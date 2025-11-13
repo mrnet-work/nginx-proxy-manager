@@ -98,6 +98,9 @@
 	"certificate.not-in-use": {
 		"defaultMessage": "Nicht in Benutzung"
 	},
+	"certificate.renew": {
+		"defaultMessage": "Zertifikat erneuern"
+	},
 	"certificates": {
 		"defaultMessage": "Zertifikate"
 	},
@@ -420,7 +423,7 @@
 		"defaultMessage": "{object} löschen"
 	},
 	"object.delete.content": {
-		"defaultMessage": "Bist du dir sicher das du diese(n) {object} löschen möchtest?"
+		"defaultMessage": "{object} wirklich löschen?"
 	},
 	"object.edit": {
 		"defaultMessage": "{object} bearbeiten"
