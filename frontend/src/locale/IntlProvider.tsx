@@ -2,6 +2,7 @@ import { createIntl, createIntlCache } from "react-intl";
 import langDe from "./lang/de.json";
 import langEn from "./lang/en.json";
 import langEs from "./lang/es.json";
+import langGa from "./lang/ga.json";
 import langIt from "./lang/it.json";
 import langJa from "./lang/ja.json";
 import langList from "./lang/lang-list.json";
@@ -13,6 +14,7 @@ import langVi from "./lang/vi.json";
 import langZh from "./lang/zh.json";
 import langKo from "./lang/ko.json";
 import langBg from "./lang/bg.json";
+import langId from "./lang/id.json";
 
 // first item of each array should be the language code,
 // not the country code
@@ -21,6 +23,7 @@ const localeOptions = [
 	["en", "en-US", langEn],
 	["de", "de-DE", langDe],
 	["es", "es-ES", langEs],
+	["ga", "ga-IE", langGa],
 	["ja", "ja-JP", langJa],
 	["it", "it-IT", langIt],
 	["nl", "nl-NL", langNl],
@@ -31,6 +34,7 @@ const localeOptions = [
 	["zh", "zh-CN", langZh],
 	["ko", "ko-KR", langKo],
 	["bg", "bg-BG", langBg],
+	["id", "id-ID", langId],
 ];
 
 const loadMessages = (locale?: string): typeof langList & typeof langEn => {
